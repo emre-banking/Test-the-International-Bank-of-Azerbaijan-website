@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "ad77f0c6-47fb-44a7-af7e-a26de9b00e84",
+		"name": "Banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HTTP 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43c2d1f4-5606-43dc-bbe3-dae3232159e6",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HTTP 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43c2d1f4-5606-43dc-bbe3-dae3232159e6",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?first_name=John&last_name=Doe",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "John"
+						},
+						{
+							"key": "last_name",
+							"value": "Doe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
