@@ -1,0 +1,568 @@
+{
+  "id": "cafca5fc-60c1-474c-9073-d6dd79bb8097",
+  "version": "2.0",
+  "name": "International Bank of Azerbaijan",
+  "url": "https://www.ibar.az",
+  "tests": [{
+    "id": "ab68ba43-03b9-4bda-a846-b80ef828ce07",
+    "name": "Internationalisation",
+    "commands": [{
+      "id": "0109d240-34d9-44be-8938-4088385d2329",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26c58333-b13b-4182-9484-f37140794165",
+      "comment": "Verify English page opened",
+      "command": "waitForText",
+      "target": "css=.sub_foot > p",
+      "targets": [],
+      "value": "© The International Bank of Azerbaijan - All rights reserved"
+    }, {
+      "id": "8369671d-936f-4547-be15-8b8e84592bf5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=AZ",
+      "targets": [
+        ["linkText=AZ", "linkText"],
+        ["css=.langs > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'AZ')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[210]", "xpath:href"],
+        ["xpath=//footer/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AZ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ea0d335-baf2-4343-b36d-f0263d2e1c00",
+      "comment": "Verify Azerbaijani page opened",
+      "command": "waitForText",
+      "target": "css=.sub_foot > p",
+      "targets": [],
+      "value": "© Azərbaycan Beynəlxalq Bankı - Bütün hüquqlar qorunur"
+    }, {
+      "id": "56d323db-61ce-4023-811f-9aaa5364d6ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=RU",
+      "targets": [
+        ["linkText=AZ", "linkText"],
+        ["css=.langs > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'AZ')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[210]", "xpath:href"],
+        ["xpath=//footer/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AZ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a336cf7-cbf8-463f-a033-f865f024c78d",
+      "comment": "Verify Russian page opened",
+      "command": "waitForText",
+      "target": "css=.sub_foot > p",
+      "targets": [],
+      "value": "© Международный Банк Азербайджана - Все права защищены"
+    }, {
+      "id": "215cddd6-b53f-4f24-b6e2-0e5750d79baf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a317d29c-9cc6-430d-b007-f010079ae0b0",
+    "name": "Global Quick Search",
+    "commands": [{
+      "id": "5edb3a4e-0fd7-4133-bd6b-01bb4df7f465",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cdc1db0-c0eb-4f52-8b5e-9af4e3c23241",
+      "comment": "Verify English page opened",
+      "command": "waitForText",
+      "target": "css=.sub_foot > p",
+      "targets": [],
+      "value": "© The International Bank of Azerbaijan - All rights reserved"
+    }, {
+      "id": "bfb620f6-ea79-4994-88ce-36c504581321",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search_query",
+      "targets": [
+        ["css=.search_query", "css:finder"],
+        ["xpath=(//input[@type='text'])[25]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ff7bf38-ab61-4bf9-bd67-8e30300ab9fb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.search_query",
+      "targets": [],
+      "value": "American Express"
+    }, {
+      "id": "b4e857ed-3ac2-41ef-91ec-8ff42be87931",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.search_query",
+      "targets": [
+        ["css=.search_query", "css:finder"],
+        ["xpath=(//input[@type='text'])[25]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a13870a9-a9bd-4c17-9981-174728c0b559",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.col:nth-child(2) .card_left",
+      "targets": [
+        ["css=.col:nth-child(2) .card_left", "css:finder"],
+        ["xpath=//a[contains(@href, '/az/individual/plastic-cards/status-cards/amex-gold/')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b28b7579-1ec0-495e-8368-758b2549f30c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.col:nth-child(3) .card_left",
+      "targets": [
+        ["css=.col:nth-child(3) .card_left", "css:finder"],
+        ["xpath=//a[contains(@href, '/az/individual/plastic-cards/status-cards/amex-green/')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[3]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cb5a644-9fe4-48e2-8615-6613d8aff1e2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6d042c3a-a8fc-448d-a052-6a8eebfa6d78",
+    "name": "Form Input Validation",
+    "commands": [{
+      "id": "136ea060-5cc6-4e9c-b606-8b2bdb01d36a",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b2aa496-655a-4668-941c-62fabffe14d3",
+      "comment": "Verify English page opened",
+      "command": "waitForText",
+      "target": "css=.sub_foot > p",
+      "targets": [],
+      "value": "© The International Bank of Azerbaijan - All rights reserved"
+    }, {
+      "id": "c154618f-1526-49bb-b4da-96ed216d4a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.block_item > b",
+      "targets": [
+        ["css=.block_item > b", "css:finder"],
+        ["xpath=//a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Order credit online!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a6b1bca-9952-4a90-bfaf-536903dbccdd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.middler",
+      "targets": [
+        ["css=.middler", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1326761f-8ec0-441c-a682-9f3ac1efd998",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Urgent loan order')]", "xpath:innerText"]
+      ],
+      "value": "Urgent loan order"
+    }, {
+      "id": "7b9d0358-e11b-42c3-b2c6-b24ea7746345",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "861d87ce-111a-4099-bf4a-15224c050056",
+    "name": "Form Input Validation_Name Field",
+    "commands": [{
+      "id": "052f1ad9-109d-441e-8407-0a50354e0099",
+      "comment": "",
+      "command": "open",
+      "target": "/en/individual/urgent-credit-order/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5788584f-f253-4d0b-b2df-6e04315f4313",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Urgent loan order')]", "xpath:innerText"]
+      ],
+      "value": "Urgent loan order"
+    }, {
+      "id": "d198b8c1-c3ca-4d53-902a-42a1dc211098",
+      "comment": "",
+      "command": "type",
+      "target": "name=surname",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Alagöz"
+    }, {
+      "id": "fa231d92-c054-485f-91f4-8ae4a3e9376d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.cl1 > .phone_mask",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "307b05e4-0e7d-4e89-bfad-3e8055a96cd9",
+      "comment": "",
+      "command": "type",
+      "target": "name=full_card_number",
+      "targets": [
+        ["name=full_card_number", "name"],
+        ["css=.cl2:nth-child(4) > .valid", "css:finder"],
+        ["xpath=//input[@name='full_card_number']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[4]/input", "xpath:idRelative"],
+        ["xpath=//section/div[4]/input", "xpath:position"]
+      ],
+      "value": "1234567890123456"
+    }, {
+      "id": "acc419ab-4f41-45e6-8305-5c0f67227b40",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[7]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30e09099-0e2b-402e-8a37-e9a53b9803b6",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.cl1:nth-child(1) span",
+      "targets": [
+        ["css=.cl1:nth-child(1) span", "css:finder"],
+        ["xpath=//form[@id='loanexpress']/section/div/div/span", "xpath:idRelative"],
+        ["xpath=//section/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'*Məlumat düzgün deyil.')]", "xpath:innerText"]
+      ],
+      "value": "*Məlumat düzgün deyil."
+    }, {
+      "id": "62c2a53f-51a3-462a-a61b-d379395c7995",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e3ac8f66-4ad2-4bf5-aa05-1692464582a4",
+    "name": "Form Input Validation_Phone Field",
+    "commands": [{
+      "id": "0021cbe5-79f7-4501-a22f-2bb1e494780a",
+      "comment": "",
+      "command": "open",
+      "target": "/en/individual/urgent-credit-order/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f270e62a-c876-4d6f-8176-a6fae4116c83",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Urgent loan order"
+    }, {
+      "id": "8cfdeb1e-eea7-45b0-93bc-1666adfa9084",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Emre"
+    }, {
+      "id": "8857585a-2837-4a7c-92f5-cc2b73572b3b",
+      "comment": "",
+      "command": "type",
+      "target": "name=surname",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Alagöz"
+    }, {
+      "id": "ec377d50-ceac-4bae-bcab-ad8136a8f520",
+      "comment": "",
+      "command": "type",
+      "target": "name=full_card_number",
+      "targets": [
+        ["name=full_card_number", "name"],
+        ["css=.cl2:nth-child(4) > .valid", "css:finder"],
+        ["xpath=//input[@name='full_card_number']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[4]/input", "xpath:idRelative"],
+        ["xpath=//section/div[4]/input", "xpath:position"]
+      ],
+      "value": "1234567890123456"
+    }, {
+      "id": "21c3ac19-e20a-4171-abe5-89f0c521fba6",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[7]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df95f84d-e9d2-479e-bc03-3945c3326663",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cl1 > .phone_mask",
+      "targets": [
+        ["css=.cl1 > .phone_mask", "css:finder"],
+        ["xpath=(//input[@name='phone'])[5]", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[3]/input", "xpath:idRelative"],
+        ["xpath=//section/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71a4e80a-daf4-45dc-a7a6-e2d0073c40e7",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.cl1:nth-child(3) span",
+      "targets": [
+        ["css=.cl1:nth-child(3) span", "css:finder"],
+        ["xpath=//form[@id='loanexpress']/section/div[3]/div/span", "xpath:idRelative"],
+        ["xpath=//section/div[3]/div/span", "xpath:position"]
+      ],
+      "value": "*Məlumat düzgün deyil."
+    }, {
+      "id": "15c0f2f1-07c4-432b-ac62-b38c7f11e6ed",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "599092e7-f1c9-4e57-af07-38197a61e726",
+    "name": "Form Input Validation_Surname Field",
+    "commands": [{
+      "id": "fdba216e-2178-4be9-a875-df926fec82b6",
+      "comment": "",
+      "command": "open",
+      "target": "/en/individual/urgent-credit-order/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a25c09f-056c-4ea1-a0d8-6049e55bdd7e",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Urgent loan order"
+    }, {
+      "id": "9695ee0a-d287-46fd-b43c-1a7a4bfec4bb",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Emre"
+    }, {
+      "id": "495a0f46-6a99-4db0-b70f-b8c93b7070dc",
+      "comment": "",
+      "command": "type",
+      "target": "css=.cl1 > .phone_mask",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "531a15de-0b4d-4849-a33c-a92606382772",
+      "comment": "",
+      "command": "type",
+      "target": "name=full_card_number",
+      "targets": [
+        ["name=full_card_number", "name"],
+        ["css=.cl2:nth-child(4) > .valid", "css:finder"],
+        ["xpath=//input[@name='full_card_number']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[4]/input", "xpath:idRelative"],
+        ["xpath=//section/div[4]/input", "xpath:position"]
+      ],
+      "value": "1234567890123456"
+    }, {
+      "id": "61b0e75e-5267-43dd-8d3d-571c6a261cce",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[7]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8fb4b81-fd8e-45e1-836e-da6a8d517074",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.cl2:nth-child(2) span",
+      "targets": [
+        ["css=.cl2:nth-child(2) span", "css:finder"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/span", "xpath:position"]
+      ],
+      "value": "*Məlumat düzgün deyil."
+    }, {
+      "id": "71b09ed1-7cf2-4059-8518-cccd3941553b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8a78b6e3-ce68-4142-a4c3-1dc6704e7c6f",
+    "name": "Form Input Validation_Card Field",
+    "commands": [{
+      "id": "09dfcd40-05d5-4c6a-b6d4-5edb3bf8b299",
+      "comment": "",
+      "command": "open",
+      "target": "/en/individual/urgent-credit-order/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14d1f838-a4a7-4888-ab45-63ba91ed4f3d",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Urgent loan order"
+    }, {
+      "id": "e72d6a7a-5eb8-46ab-8d7a-2406fdd1b603",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Emre"
+    }, {
+      "id": "b9db373a-3920-4ba2-8af2-c5d2cfb3859c",
+      "comment": "",
+      "command": "type",
+      "target": "name=surname",
+      "targets": [
+        ["name=surname", "name"],
+        ["css=.cl2:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='surname']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section/div[2]/input", "xpath:position"]
+      ],
+      "value": "Alagöz"
+    }, {
+      "id": "a59505ab-c577-4225-8f22-b67ad1be6367",
+      "comment": "",
+      "command": "type",
+      "target": "css=.cl1 > .phone_mask",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "5f90b736-fc28-4f37-aee8-351776aa6152",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//form[@id='loanexpress']/section/div[7]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1415ea8d-cab4-4b50-9ada-19b519724044",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.cl2:nth-child(4) span",
+      "targets": [
+        ["css=.cl2:nth-child(2) span", "css:finder"],
+        ["xpath=//form[@id='loanexpress']/section/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/span", "xpath:position"]
+      ],
+      "value": "*Məlumat düzgün deyil."
+    }, {
+      "id": "08474dfc-c10f-448f-966d-7bebd514dc92",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a56451ea-712b-4648-a2b0-050c6effeae8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ab68ba43-03b9-4bda-a846-b80ef828ce07"]
+  }],
+  "urls": ["https://www.ibar.az/"],
+  "plugins": []
+}
