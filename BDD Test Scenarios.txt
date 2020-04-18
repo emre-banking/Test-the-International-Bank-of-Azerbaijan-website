@@ -1,0 +1,34 @@
+GIVEN customer is on the InternetBank page
+WHEN he/she enters true login and wrong password 
+AND he/she clicks Log In button
+THEN internet bank homepage is not opened
+AND an error message is showed to given customer
+
+GIVEN customer is on the "urgent loan order" page
+WHEN he/she enters all required registration fields
+THEN correct data is got saved in the database
+
+GIVEN customer is on the International Bank of Azerbaijan homepage
+WHEN he/she clicks AZ language button
+THEN the homepage is opened in Azerbaijani language
+
+GIVEN customer is on the International Bank of Azerbaijan homepage
+WHEN he/she enters a search parameter into search bar
+AND he/she clicks search icon next to the seach bar
+THEN search page is displayed with given search parameters 
+
+GIVEN customer is on the International Bank of Azerbaijan homepage
+AND he/she opened a child window
+WHEN he/she gets close the parent window
+THEN child window is getting close
+
+GIVEN customer is on the International Bank of Azerbaijan homepage
+WHEN he/she clicks on social media links
+THEN he/she is directed to the correct social media pages
+
+GIVEN customer displayed "Contact us" form
+WHEN he/she clicks on send button without enters required fields
+THEN validation messages are displayed porperly
+
+
+Behaviour Driven Development (BDD) is about to simplfy the communication between different shareholders such as business analysts, developers, testers and customers. Thus while the test cases are written, the tester uses a more simplified language according to test driven development approach. So that all the shareholders can read  and understand the given scenarios. To provide this simplicity, tester includes 3 key elements in his/her scenarios. While the word GIVEN defines the context, WHEN describes the action taken by a spesific user. The word THEN is the expected result of the action.
